@@ -1,0 +1,10 @@
+n=int(input())
+x = list(map(int, input().split()))
+w = list(map(int, input().split()))
+
+sum_xw=0
+sum_w=0
+for i in range(n):
+    sum_xw=sum_xw+(x[i]*w[i])
+    sum_w=sum_w+w[i]
+print(round((sum_xw/sum_w),1))
