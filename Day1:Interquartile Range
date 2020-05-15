@@ -1,0 +1,31 @@
+n = int(input())
+
+x = list(map(int, input().split()))
+f = list(map(int, input().split()))
+
+S = []
+for i in range(n):
+    for j in range(int(f[i])):
+        S.append(int(x[i]))
+
+S=sorted(S)
+n=len(S)
+
+mid=n//2
+
+def median(list) :
+    i = len(list)//2
+    
+    if len(list) % 2 != 0:
+        return list[i]
+    
+    return (list[i] + list[i-1]) / 2
+
+q1=float(median(S[0:mid]))
+
+if n%2==0:
+    q3=float(median(S[mid:n]))
+else:
+    q3=float(median(S[mid+1:n]))
+
+print(round((q3-q1),1))
