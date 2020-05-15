@@ -1,0 +1,21 @@
+n = int(input())
+x = list(map(int, input().split()))
+
+x=sorted(x)
+
+mid=n//2 
+
+def median(list) :
+    i = len(list)//2
+    
+    if len(list) % 2 != 0:
+        return list[i]
+    
+    return (list[i] + list[i-1]) // 2
+
+print(median(x[0:mid]))
+print(median(x))
+if n%2==0:
+    print(median(x[mid:n]))
+else:
+    print(median(x[mid+1:n]))
