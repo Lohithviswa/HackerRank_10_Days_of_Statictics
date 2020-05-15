@@ -1,0 +1,13 @@
+import math
+n = int(input())
+
+x = list(map(int, input().split()))
+
+mean= sum(x)/n
+s = 0
+for i in range(n):
+    s = s + (x[i] - mean) ** 2
+
+stddev= math.sqrt(s / n)
+
+print(round(stddev, 1))
