@@ -1,0 +1,7 @@
+Suppose a family has 2 children
+possible events : {BB,BG,GB,GG}
+They given that one of which is a boy.So,
+Total Required events:S={BB,BG,GB}
+Probability of both boys E={BB}
+  P(E)=|E| / |S|
+      =1/3
